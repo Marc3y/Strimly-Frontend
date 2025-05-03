@@ -1,27 +1,27 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Strimly",
+  description: "the best utilities for your twitch stream.",
   navItems: [
     {
       label: "Home",
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "TTS",
+      href: "/tts",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "Song-Requests",
+      href: "/sr",
     },
     {
-      label: "Blog",
+      label: "Video-Requests",
       href: "/blog",
     },
     {
-      label: "About",
+      label: "Game-Detection",
       href: "/about",
     },
   ],
@@ -60,10 +60,18 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/Marc3y",
+    twitter: "https://twitter.com/marcey____",
+    discord: "https://discord.gg/JJaZGMcgyg",
   },
 };
+
+export const roles = [
+  {key: "user", label: "User"},
+  {key: "vip", label: "VIP"},
+  {key: "mods", label: "Mods"},
+];
+
+export const apiLink = "https://strimlyapi.marcey.xyz";
+export const globalLink = "https://strimly.marcey.xyz";
+export const loginLink = "https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=012nyl7y9owvlzwadu2qljbg8qp0nr&redirect_uri=https://strimly.marcey.xyz/&scope=channel:manage:redemptions channel:read:redemptions chat:edit chat:read&state=strimly";

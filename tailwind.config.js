@@ -13,10 +13,24 @@ const config = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
+      animation: {
+        scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: 'translate(calc(-50% - 0.5rem))',
+          },
+        },
+      },
     },
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   darkMode: "class",
-  plugins: [heroui()],
+  plugins: [heroui(),
+  require("tailwindcss-animated")],
 }
 
 module.exports = config;

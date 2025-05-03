@@ -8,28 +8,33 @@ export const Logo: React.FC<IconSvgProps> = ({
   height,
   ...props
 }) => (
-  <svg
-    fill="none"
-    height={size || height}
-    viewBox="0 0 32 32"
-    width={size || width}
-    {...props}
-  >
-    <path
-      clipRule="evenodd"
-      d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-      fill="currentColor"
-      fillRule="evenodd"
-    />
-  </svg>
+  <img src={"https://data.marcey.xyz/strimly/strimlylogo.png"} width={"16"}  alt={"Strimly Logo"}/>
 );
 
-export const DiscordIcon: React.FC<IconSvgProps> = ({
+export const TwitchIcon:React.FC<IconSvgProps> = ({
   size = 24,
   width,
   height,
   ...props
 }) => {
+  return (
+    <svg height={size || height} viewBox="0 0 24 24"
+         width={size || width}
+         {...props} className="lucide lucide-twitch-icon lucide-twitch" fill="none" stroke="currentColor" strokeLinecap="round"
+              strokeLinejoin="round" strokeWidth="2"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7" />
+    </svg>
+  );
+};
+
+export const DiscordIcon: React.FC<IconSvgProps> = ({
+                                                      size = 24,
+                                                      width,
+                                                      height,
+                                                      ...props
+                                                    }) => {
   return (
     <svg
       height={size || height}
